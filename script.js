@@ -1,12 +1,12 @@
-fetch("https://api.dictionaryapi.dev/api/v2/entries/en/link")
-  .then(function(response) {
-      console.log(response)
-    return response.json();
-  })
-  .then(function(jsonData) {
-    console.log(jsonData);
-    // document.getElementById('display-data').innerText = jsonData.meanings;
-  })
+// fetch("https://api.dictionaryapi.dev/api/v2/entries/en/link")
+//   .then(function(response) {
+//       console.log(response)
+//     return response.json();
+//   })
+//   .then(function(jsonData) {
+//     console.log(jsonData);
+//     // document.getElementById('display-data').innerText = jsonData.meanings;
+//   })
 const baseURL = "https://api.dictionaryapi.dev/api/v2/entries/en/";
 const userWord = document.getElementById('userWord');
 let buttonElement = document.getElementById('submit');
@@ -19,7 +19,7 @@ function displayDefinition(meanings) {
     resultsElement.innerHTML = '';
     let meaningsElement = document.createElement('p');
 
-   meaningsElement.innerText = meanings;
+   meaningsElement.innerText = "DEFINITION: " + meanings;
 
     resultsElement.appendChild(meaningsElement);
 }
